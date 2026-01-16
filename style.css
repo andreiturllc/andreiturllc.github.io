@@ -1,0 +1,116 @@
+
+:root{
+  --bg:#f7f7f5;
+  --ink:#1f2a2e;
+  --muted:#54656b;
+  --card:#ffffff;
+  --line:rgba(0,0,0,.08);
+  --accent:#5f7c6a;
+  --accent2:#5a7a92;
+  --soft:#e9ede8;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.55;
+}
+a{color:var(--accent2); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px; margin:0 auto; padding:0 20px}
+
+.hero{
+  background:linear-gradient(180deg, var(--soft), var(--bg));
+  border-bottom:1px solid var(--line);
+  padding:52px 0 34px;
+  text-align:center;
+}
+.logo{
+  width:min(340px, 80%);
+  height:auto;
+  display:block;
+  margin:0 auto 16px;
+}
+h1{margin:6px 0 0; font-size:44px; letter-spacing:.2px}
+.subtitle{margin:10px 0 18px; color:var(--muted); font-size:18px}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,.14);
+  background:#fff;
+  color:var(--ink);
+  font-weight:650;
+}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  border-color:rgba(0,0,0,.08);
+}
+
+.section{padding:44px 0}
+.section.soft{
+  margin:26px 0 52px;
+  padding:34px 0;
+  background:rgba(255,255,255,.55);
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+.lead{color:var(--muted); margin-top:8px; max-width:740px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  margin-top:22px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px 14px;
+}
+.card h3{margin:0 0 6px}
+.card p{margin:0; color:var(--muted); font-size:14px}
+
+.split{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:16px;
+  align-items:start;
+  padding:0 20px;
+}
+.highlight ul{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:var(--muted);
+}
+.highlight li{margin:8px 0}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:18px 0;
+  text-align:center;
+  color:rgba(0,0,0,.55);
+  font-size:14px;
+}
+
+@media (max-width: 920px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  h1{font-size:36px}
+}
+@media (max-width: 480px){
+  .grid{grid-template-columns:1fr}
+  .btn{width:100%; text-align:center}
+}
